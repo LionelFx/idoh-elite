@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Magenta rounded-square background -->
+  <rect width="200" height="200" rx="28" fill="#CE0F69"/>
+  <!-- Person/relay icon — circle head -->
+  <circle cx="78" cy="38" r="14" fill="rgba(180,180,170,0.9)"/>
+  <!-- Small square (relay point) top-right -->
+  <rect x="104" y="30" width="18" height="18" fill="rgba(180,180,170,0.9)"/>
+  <!-- Body: stylised lowercase r shape in white -->
+  <!-- Vertical stem -->
+  <rect x="64" y="52" width="18" height="72" fill="white" rx="2"/>
+  <!-- Curved arm: a white arc going right then down (r shape) -->
+  <path d="M82,66 Q130,62 132,98 Q132,120 108,122" stroke="white" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Text: mondial -->
+  <text x="100" y="152"
+        font-family="'Helvetica Neue',Arial,sans-serif"
+        font-size="18" font-weight="400" fill="white"
+        text-anchor="middle" letter-spacing="3">mondial</text>
+  <!-- Text: rELAY -->
+  <text x="100" y="180"
+        font-family="'Helvetica Neue',Arial,sans-serif"
+        font-size="28" font-weight="700" fill="white"
+        text-anchor="middle" letter-spacing="1">rELAY</text>
+</svg>

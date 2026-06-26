@@ -1,0 +1,135 @@
+[
+  {
+    "id": "1",
+    "name": "France Nike Away 2026",
+    "description": "Le maillot extérieur officiel de l'Équipe de France pour la Coupe du Monde 2026. Tissu Aero-Swift ultra-respirant, broderie coq doré en relief, bandes tricolores aux poignets. Une pièce collector incontournable pour tout fan des Bleus.",
+    "price": 129.99,
+    "category": "Maillot",
+    "category_id": "1",
+    "images": [
+      "/products/france-away-clean.webp",
+      "/products/france-away-hang.webp",
+      "/products/france-away-front.webp"
+    ],
+    "colors": ["#A8D8C8"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stock": 12,
+    "rating": 4.9,
+    "reviews_count": 38,
+    "brand": "Nike × FFF",
+    "created_at": "2024-03-01T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "name": "France Nike Home Aero Fit 2026",
+    "description": "Le maillot domicile officiel des Bleus, version Aero Fit Match. Construction légère à haute compression pour les professionnels. Col V classique, insigne FFF brodé, technologie Dri-FIT ADV. Le maillot des champions du monde.",
+    "price": 149.99,
+    "category": "Maillot",
+    "category_id": "1",
+    "images": [
+      "/products/france-home.webp"
+    ],
+    "colors": ["#002395", "#FFFFFF"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stock": 8,
+    "rating": 4.8,
+    "reviews_count": 27,
+    "brand": "Nike × FFF",
+    "created_at": "2024-03-01T10:00:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Haïti Saeta Domicile 2024",
+    "description": "Le maillot officiel de la Sélection Nationale d'Haïti, signé Saeta. Motifs vaudou subtilement tissés dans le tissu, écusson brodé Fédération Haïtienne de Football. Une pièce unique entre patrimoine culturel et football moderne.",
+    "price": 89.99,
+    "category": "Maillot",
+    "category_id": "1",
+    "images": [
+      "/products/haiti-front.webp",
+      "/products/haiti-badge.webp",
+      "/products/haiti-detail.webp"
+    ],
+    "colors": ["#FFFFFF", "#002395", "#D21034"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "stock": 18,
+    "rating": 4.7,
+    "reviews_count": 21,
+    "brand": "Saeta × FHF",
+    "created_at": "2024-02-01T10:00:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Air Jordan 4 × KAWS",
+    "description": "La collaboration légendaire entre Jordan Brand et l'artiste KAWS. Upper intégralement recouvert de daim gris avec motifs KAWS gravés à la main, semelle intermédiaire translucide révélant la chambre à air. Expédié dans la boîte collector KAWS × AIR signée. Un graal absolu.",
+    "price": 899.00,
+    "category": "Chaussure",
+    "category_id": "2",
+    "images": [
+      "/products/jordan-kaws-1.webp",
+      "/products/jordan-kaws-2.webp"
+    ],
+    "colors": ["#808080"],
+    "sizes": ["40", "41", "42", "43", "44", "45", "46"],
+    "stock": 3,
+    "rating": 5.0,
+    "reviews_count": 14,
+    "brand": "Jordan × KAWS",
+    "created_at": "2024-01-15T10:00:00Z"
+  },
+  {
+    "id": "5",
+    "name": "LV Trainer Monogram",
+    "description": "Le LV Trainer imaginé par Virgil Abloh — la pièce qui a redéfini le sneaker de luxe. Monogramme LV en cuir embossé, empiècements Damier tissés, semelle en gomme sculptée avec relief Louis Vuitton. L'alliance parfaite du sport et du luxe absolu.",
+    "price": 1290.00,
+    "category": "Chaussure",
+    "category_id": "2",
+    "images": [
+      "/products/lv-trainer.webp"
+    ],
+    "colors": ["#111111", "#FFFFFF"],
+    "sizes": ["39", "40", "41", "42", "43", "44", "45"],
+    "stock": 5,
+    "rating": 4.8,
+    "reviews_count": 9,
+    "brand": "Louis Vuitton",
+    "created_at": "2024-01-20T10:00:00Z"
+  },
+  {
+    "id": "6",
+    "name": "New Balance 610 Triple Black",
+    "description": "Le NB 610 dans son coloris Triple Black — l'élégance monochrome au service de la performance trail. Mesh technique renforcé, semelle intermédiaire ABZORB, empiècements cuir premium. Un classique trail réinterprété pour la rue avec une attitude sombre irréprochable.",
+    "price": 149.99,
+    "category": "Chaussure",
+    "category_id": "2",
+    "images": [
+      "/products/nb610-1.webp",
+      "/products/nb610-2.webp"
+    ],
+    "colors": ["#111111"],
+    "sizes": ["38", "39", "40", "41", "42", "43", "44", "45", "46"],
+    "stock": 22,
+    "rating": 4.6,
+    "reviews_count": 47,
+    "brand": "New Balance",
+    "created_at": "2024-02-20T10:00:00Z"
+  },
+  {
+    "id": "7",
+    "name": "Burberry Logo Print Tee",
+    "description": "Le T-shirt signature de la maison Burberry. Coton peigné double fil 180g pré-lavé, impression Burberry London England en sérigraphie relief. Coupe semi-oversize légèrement déstructurée. Finitions soignées col renforcé. Une pièce intemporelle entre luxe et décontraction assumée.",
+    "price": 320.00,
+    "category": "T-shirt",
+    "category_id": "4",
+    "images": [
+      "/products/burberry-1.webp",
+      "/products/burberry-2.webp"
+    ],
+    "colors": ["#FFFFFF"],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "stock": 15,
+    "rating": 4.5,
+    "reviews_count": 26,
+    "brand": "Burberry",
+    "created_at": "2024-03-10T10:00:00Z"
+  }
+]

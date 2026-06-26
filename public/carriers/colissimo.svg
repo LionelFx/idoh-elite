@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72">
+  <defs>
+    <linearGradient id="ct" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#FFC338"/>
+      <stop offset="100%" stop-color="#FF9900"/>
+    </linearGradient>
+    <linearGradient id="cl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D96B00"/>
+      <stop offset="100%" stop-color="#A84F00"/>
+    </linearGradient>
+    <linearGradient id="cr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EE8800"/>
+      <stop offset="100%" stop-color="#C96200"/>
+    </linearGradient>
+  </defs>
+  <!-- Top face -->
+  <polygon points="36,7 62,20 36,33 10,20" fill="url(#ct)"/>
+  <!-- Left face -->
+  <polygon points="10,20 36,33 36,61 10,48" fill="url(#cl)"/>
+  <!-- Right face -->
+  <polygon points="62,20 36,33 36,61 62,48" fill="url(#cr)"/>
+  <!-- White Y groove on top -->
+  <line x1="36" y1="7" x2="36" y2="33" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="36" y1="33" x2="10" y2="20" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="75" y="42"
+        font-family="'Arial Rounded MT Bold','Nunito','Helvetica Neue',Arial,sans-serif"
+        font-size="23" font-weight="700" fill="#3D3D3B" letter-spacing="-0.3">colissimo</text>
+</svg>

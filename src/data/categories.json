@@ -1,0 +1,7 @@
+[
+  { "id": "1", "name": "Maillots", "slug": "maillot", "icon": "🥇" },
+  { "id": "2", "name": "Chaussures", "slug": "chaussure", "icon": "👟" },
+  { "id": "3", "name": "Survêtements", "slug": "survetement", "icon": "🏃" },
+  { "id": "4", "name": "T-shirts", "slug": "tshirt", "icon": "👕" },
+  { "id": "5", "name": "Essentiels", "slug": "essentiel", "icon": "✦" }
+]
