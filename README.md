@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iDoh ELITE
 
-## Getting Started
+Boutique en ligne de sportswear premium et streetwear de luxe — maillots officiels, sneakers et essentiels.
 
-First, run the development server:
+**Site en production :** [www.idohluxury.com](https://www.idohluxury.com)
+
+---
+
+## Stack technique
+
+| Technologie | Rôle |
+|-------------|------|
+| Next.js 16.2.9 (App Router) | Framework full-stack |
+| React 19 / TypeScript 5 | UI et typage |
+| Tailwind CSS v4 | Styles (design system tokens) |
+| Supabase | Base de données PostgreSQL + Auth |
+| Stripe | Paiement en ligne (mode live) |
+| Nodemailer | Emails transactionnels (Gmail SMTP) |
+| OpenAI | Génération de contenu email et descriptions |
+| Recharts | Graphiques dashboard admin |
+| Vercel | Déploiement et hébergement |
+
+---
+
+## Fonctionnalités
+
+- **Catalogue** — filtres par catégorie et prix, tri, recherche, pagination
+- **Fiche produit** — galerie, coloris, tailles, compteur de stock, avis
+- **Panier** — persistance session, mise à jour quantité
+- **Paiement** — Stripe Checkout (invité ou compte, livraison Standard/Express)
+- **Comptes clients** — inscription, connexion, historique des commandes, annulation
+- **Checkout invité** — paiement sans compte, création de compte proposée après achat
+- **Espace admin** — dashboard stats, gestion commandes/produits/codes promo/newsletter/messages
+- **Emails automatiques** — confirmation commande, mise à jour statut, panier abandonné
+- **Pages légales** — Mentions légales, CGV, Politique de retours
+- **SEO** — sitemap, robots.txt, OpenGraph, métadonnées dynamiques
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/LionelFx/idoh-elite.git
+cd idoh-elite
+npm install
+```
+
+Copie `.env.example` en `.env.local` et renseigne les variables (voir ci-dessous).
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site tourne sur [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables d'environnement
 
-## Learn More
+```env
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+# Stripe
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_WEBHOOK_SECRET=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# OpenAI
+OPENAI_API_KEY=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Gmail (nodemailer)
+GMAIL_USER=
+GMAIL_APP_PASSWORD=
 
-## Deploy on Vercel
+# Site
+NEXT_PUBLIC_SITE_URL=https://www.idohluxury.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Cron
+CRON_SECRET=
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Scripts
+
+```bash
+npm run dev      # Serveur de développement (Turbopack)
+npm run build    # Build production
+npm run start    # Serveur production local
+npm run lint     # ESLint
+```
+
+---
+
+## Structure
+
+```
+src/
+  app/           # Pages (App Router) + API routes
+  components/    # Composants UI réutilisables
+  contexts/      # CartContext, WishlistContext, ToastContext, AuthContext
+  lib/           # Supabase, Stripe, mailer, utilitaires
+  types/         # Types TypeScript partagés
+  data/          # Catégories (JSON statique)
+public/
+  products/      # Images produits (.webp)
+  carriers/      # Logos transporteurs
+```

@@ -21,16 +21,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/admin/login") { setReady(true); return; }
-    if (localStorage.getItem("admin_auth") !== "idoh_admin_authenticated") {
-      router.replace("/admin/login");
-    } else {
-      setReady(true);
-    }
-  }, [pathname, router]);
+    setReady(true);
+  }, []);
 
-  const logout = () => {
-    localStorage.removeItem("admin_auth");
+  const logout = async () => {
+    await fetch("/api/admin/auth", { method: "DELETE" });
     router.push("/admin/login");
   };
 

@@ -4,28 +4,35 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Lock, Eye, EyeOff } from "lucide-react";
 
-const ADMIN_EMAIL    = "idohelite@gmail.com";
-const ADMIN_PASSWORD = "iDoh@Elite2026";
-
 export default function AdminLogin() {
   const router = useRouter();
   const [email, setEmail]       = useState("");
   const [password, setPassword] = useState("");
   const [error, setError]       = useState("");
   const [show, setShow]         = useState(false);
+  const [loading, setLoading]   = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email !== ADMIN_EMAIL) {
-      setError("Accès refusé — email non autorisé.");
-      return;
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/admin/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      if (!res.ok) {
+        const { error: msg } = await res.json();
+        setError(msg ?? "Identifiants incorrects.");
+        return;
+      }
+      router.push("/admin");
+    } catch {
+      setError("Erreur réseau — réessaie.");
+    } finally {
+      setLoading(false);
     }
-    if (password !== ADMIN_PASSWORD) {
-      setError("Mot de passe incorrect.");
-      return;
-    }
-    localStorage.setItem("admin_auth", "idoh_admin_authenticated");
-    router.push("/admin");
   };
 
   return (
@@ -82,9 +89,10 @@ export default function AdminLogin() {
 
             <button
               type="submit"
-              className="w-full bg-[#FF9D3D] hover:bg-[#FFB366] text-white font-bold uppercase tracking-widest text-sm py-3.5 rounded-lg transition-colors cursor-pointer mt-2"
+              disabled={loading}
+              className="w-full bg-[#FF9D3D] hover:bg-[#FFB366] disabled:opacity-60 text-white font-bold uppercase tracking-widest text-sm py-3.5 rounded-lg transition-colors cursor-pointer mt-2"
             >
-              Accéder
+              {loading ? "Vérification…" : "Accéder"}
             </button>
           </form>
         </div>
